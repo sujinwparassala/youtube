@@ -1,0 +1,9 @@
+import pytube  
+from pytube import YouTube  
+#video_url = 'https://youtu.be/N2cMFZgMm24'  
+c = input("ENTER YOUR YOUTUBE VIDEO LINK:")
+print("PLEASE WAIT WE ARE SEARCHING FOR YOUR VIDEO....")
+youtube = pytube.YouTube(c)  
+video = youtube.streams.first()  
+video.download('\Desktop2')
+print("file downloded")
